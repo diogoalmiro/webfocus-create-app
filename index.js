@@ -34,10 +34,7 @@ const packageTemplateObj = {
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@webfocus/app": "^0.1.2",
-    }
+    "license": "ISC"
 };
 
 input("Application Name: ").then(title => {
@@ -48,7 +45,8 @@ input("Application Name: ").then(title => {
     packageTemplateObj.name = title.toLowerCase().split(' ').join('-');
     fs.writeFileSync('package.json', JSON.stringify(packageTemplateObj, null, '  '), {flag:'wx'});
 
-    child_process.execSync('npm install')
+    // Install dependencies
+    child_process.execSync('npm install @webfocus/app');
     return 0;
 })
     .catch(e => {console.error(e); return 1})
