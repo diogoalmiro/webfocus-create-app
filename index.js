@@ -3,6 +3,8 @@ const fs = require('fs');
 const readline = require('readline');
 const promisify = require('util').promisify
 
+const child_process = require('child_process');
+
 const rl = readline.createInterface(process.stdin, process.stdout);
 const input = promisify(rl.question).bind(rl);
 
@@ -38,18 +40,17 @@ const packageTemplateObj = {
     }
 };
 
-(async () => {
-    let title = await input('Insert application name> ');
-
+input("Application Name: ").then(title => {
     // Create index.js file
-    let r = fs.writeFileSync('index.js', indexTemplate(title), {flag:'wx'});
-    console.log(r)
+    fs.writeFileSync('index.js', indexTemplate(title), {flag:'wx'});
+    
     // Create package.js file
     packageTemplateObj.name = title.toLowerCase().split(' ').join('-');
-    r = fs.writeFileSync('package.json', JSON.stringify(packageTemplateObj, null, '  '), {flag:'wx'});
-    console.log(r)
-    return 0
-})()
+    fs.writeFileSync('package.json', JSON.stringify(packageTemplateObj, null, '  '), {flag:'wx'});
+
+    child_process.execSync('npm install')
+    return 0;
+})
     .catch(e => {console.error(e); return 1})
     .finally(r => process.exit(r))
 
