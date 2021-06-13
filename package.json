@@ -1,0 +1,16 @@
+{
+  "name": "@webfocus/create-app",
+  "version": "0.0.1",
+  "description": "Generator for applications using the webfocus framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "diogoalmiro/webfocus-create-app",
+  "keywords": [
+    "webfocus",
+    "app"
+  ],
+  "author": "Diogo Almiro",
+  "license": "ISC"
+}
