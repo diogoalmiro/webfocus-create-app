@@ -1,10 +1,10 @@
 {
   "name": "@webfocus/create-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generator for applications using the webfocus framework.",
   "main": "index.js",
   "bin":{
-    "create-webfocus-app": "index.js"
+    "create-app": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
