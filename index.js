@@ -20,6 +20,7 @@ let webfocusApp = new WebfocusApp( configuration );
 
 // Register webfocus/app comonents here
 // e.g. webfocusApp.registerComponent(require('../component-example'));
+webfocusApp.registerComponent(require('@webfocus/util/component')
 
 webfocusApp.start();
 `
@@ -46,7 +47,7 @@ input("Application Name: ").then(title => {
     fs.writeFileSync('package.json', JSON.stringify(packageTemplateObj, null, '  '), {flag:'wx'});
 
     // Install dependencies
-    child_process.execSync('npm install @webfocus/app');
+    child_process.execSync('npm install @webfocus/app @webfocus/util');
     return 0;
 })
 .catch(e => {console.error(e); return 1})
