@@ -1,6 +1,6 @@
 {
   "name": "@webfocus/create-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generator for applications using the webfocus framework.",
   "main": "index.js",
   "bin":{
@@ -15,5 +15,5 @@
     "app"
   ],
   "author": "Diogo Almiro",
-  "license": "ISC"
+  "license": "MIT"
 }

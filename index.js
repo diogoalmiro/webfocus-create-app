@@ -49,9 +49,5 @@ input("Application Name: ").then(title => {
     child_process.execSync('npm install @webfocus/app');
     return 0;
 })
-    .catch(e => {console.error(e); return 1})
-    .finally(r => process.exit(r))
-
-
-
-
+.catch(e => {console.error(e); return 1})
+.finally(r => process.exit(r))
