@@ -20,7 +20,7 @@ let webfocusApp = new WebfocusApp( configuration );
 
 // Register webfocus/app comonents here
 // e.g. webfocusApp.registerComponent(require('../component-example'));
-webfocusApp.registerComponent(require('@webfocus/util/component')
+webfocusApp.registerComponent(require('@webfocus/util/component'));
 
 webfocusApp.start();
 `

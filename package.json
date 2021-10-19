@@ -1,6 +1,6 @@
 {
   "name": "@webfocus/create-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generator for applications using the webfocus framework.",
   "main": "index.js",
   "bin": {
